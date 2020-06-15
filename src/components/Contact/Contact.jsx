@@ -9,24 +9,24 @@ const Contact = (props) => {
         <div className="w-full flex pt-3">
             <form className="text-lg inline-block tracking-normal" action="https://formspree.io/mwkpvwjv" method="POST">
                 <div className="input">
-                    <label className="input-title">NAME</label>
-                    <input id="contactName" type="text" name="name" defaultValue="John Doe" onFocus={function(e){e.target.value=''}}/>
+                    <label id="lblContactName" htmlFor="contactName" className="input-title">NAME</label>
+                    <input id="contactName" aria-labelledby="lblContactName" type="text" name="name" defaultValue="John Doe" onFocus={function(e){e.target.value=''}}/>
                 </div>
                 <div className="input">
-                    <label className="input-title">EMAIL</label>
-                    <input id="emailAddress" type="email" name="_replyto" defaultValue="example@domain.com" onFocus={function(e){e.target.value=''}}/>
+                    <label id="lblEmailAddress" htmlFor="emailAddress" className="input-title">EMAIL</label>
+                    <input id="emailAddress" aria-labelledby="lblEmailAddress" type="email" name="_replyto" defaultValue="example@domain.com" onFocus={function(e){e.target.value=''}}/>
                 </div>
                 <div className="input">
-                    <label className="input-title">MESSAGE</label>
-                    <textarea id="messageBox" name="message" ></textarea>
+                    <label id="lblMessageBox" htmlFor="messageBox" className="input-title">MESSAGE</label>
+                    <textarea id="messageBox" name="message" aria-labelledby="lblMessageBox"></textarea>
                 </div>
-                <input id="submit" type="submit" className="btn submit" defaultValue="SUBMIT"/>
+                <input id="submit" type="submit" className="btn submit" aria-label="submit" defaultValue="SUBMIT"/>
             </form>
             <div id="externalLinks" className="w-2 pl-5">
-                <label className="block">LINKS</label>                        
+                <h4 className="block">LINKS</h4>                        
                 <div className="inline-flex">
-                    <a href="https://github.com/michaelhrivnak"><i className="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/michael-hrivnak-9a81aa38"><i className="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/michaelhrivnak" aria-label="github"><i className="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/michael-hrivnak-9a81aa38" aria-label="linkedIn"><i className="fab fa-linkedin"></i></a>
                 </div>    
             </div>
         </div>

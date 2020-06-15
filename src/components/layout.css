@@ -615,6 +615,15 @@ pre tt:before,
 pre tt:after {
   content: "";
 }
+
+a > i{
+  font-size:50px;
+  margin-right: 25px;
+}
+a:hover > i{
+  color:#467C8A;
+}
+
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;
