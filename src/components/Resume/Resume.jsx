@@ -10,6 +10,12 @@ const Resume = (props) => {
         <div id="resumeBody">
             <a href={resumePdf} rel="noopener noreferrer" target="_blank">View Resume</a>
         </div>
+        <style jsx>{`
+            a{
+                font-size: 1.5rem;
+                letter-spacing: 0.1em;
+            }
+        `}</style>
     </section>)
 
 }

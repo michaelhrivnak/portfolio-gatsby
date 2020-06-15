@@ -1,7 +1,38 @@
 [
     {
-        "skill":"",
-        "img":"",
+        "skill":"HTML 5",
+        "img":"html.png",
+        "alt":""
+    },
+    {
+        "skill":"CSS 3",
+        "img":"css.png",
+        "alt":""
+    },
+    {
+        "skill":"Javascript",
+        "img":"javascript.png",
+        "alt":""
+    },
+    {
+        "skill":"Jquery",
+        "img":"Jquery.png",
+        "alt":""
+    },
+    {
+        "skill":"React",
+        "img":"React-icon.png",
+        "alt":""
+        
+    },
+    {
+        "skill":"nodeJS",
+        "img":"nodejs.png",
+        "alt":""
+    },
+    {
+        "skill":"C#",
+        "img":"800px-C_Sharp_logo.png",
         "alt":""
     }
 ]

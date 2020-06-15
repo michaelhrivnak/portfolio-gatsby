@@ -616,6 +616,15 @@ pre tt:after {
   content: "";
 }
 
+body{
+  font-family: 'Raleway', Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  margin: 0;
+  background-color: rgb(226, 226, 226);
+  color: #777777;
+  
+}
+
 a > i{
   font-size:50px;
   margin-right: 25px;
@@ -623,7 +632,18 @@ a > i{
 a:hover > i{
   color:#467C8A;
 }
-
+a{
+  color: inherit;
+  text-decoration: inherit;
+}
+section {
+  padding-top: 150px;
+}
+h1{
+  letter-spacing: 0.4em;
+  font-size: 1.5rem;
+  font-weight: inherit;
+}
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;

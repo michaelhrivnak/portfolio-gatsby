@@ -3,42 +3,93 @@
         "url":"https://buckeatlist.herokuapp.com/",
         "title":"buckEATlist",
         "img":"buckeatlist.png",
-        "desc":"",
-        "repo":""
+        "desc":"Make a bucket list of where you want to eat and share it with friends",
+        "repo":"",
+        "tech":[
+            {
+                "name":"react",
+                "icon":"React-icon.png"
+            },
+            {
+                "name":"mongodb",
+                "icon":"mongodb.png"
+            },
+            {
+                "name":"nodejs",
+                "icon":"nodejs.png"
+            }
+        ]
     },
     {
         "url":"https://michaelhrivnak.github.io/JobRocket/",
         "title":"Job Rocket",
         "img":"JobRocketReadme.png",
-        "desc":"",
-        "repo":""
+        "desc":"Job search engine that maps your potential route to work via transit",
+        "repo":"https://github.com/michaelhrivnak/JobRocket",
+        "tech":[
+            {
+                "name":"bootstrap",
+                "icon":"bootstrap.png"
+            },
+            {
+                "name":"mysql",
+                "icon":"mysql.png"
+            },
+            {
+                "name":"nodejs",
+                "icon":"nodejs.png"
+            }
+        ]
     },
     {
         "url":"https://michaelhrivnak.github.io/Password-Generator/",
         "title":"Password Generator",
         "img":"PasswordGenerator.png",
-        "desc":"",
-        "repo":""
+        "desc":"Simple password generator with complexity options",
+        "repo":"",
+        "tech":[
+            {
+                "name":"HTML 5",
+                "icon":"html.png"
+            },
+            {
+                "name":"javascript",
+                "icon":"javascript.png"
+            }
+        ]
     },
     {
         "url":"https://michaelhrivnak.github.io/Weather-Dashboard/",
         "title":"Weather Dashboard",
         "img":"WeatherDashboard.png",
-        "desc":"",
-        "repo":""
+        "desc":"Location search based weather dashboard with 5 day forecast using openweather API",
+        "repo":"",
+        "tech":[
+            {
+                "name":"bootstrap",
+                "icon":"bootstrap.png"
+            },
+            {
+                "name":"jquery",
+                "icon":"jquery.png"
+            }
+        ]
     },
     {
-        "url":"https://github.com/michaelhrivnak/Fitness-Tracker",
-        "title":"Fitness Tracker",
-        "img":"FitnessTracker.png",
-        "desc":"",
-        "repo":""
-    },
-    {
-        "url":"https://github.com/michaelhrivnak/Employee-Tracker",
+        "url":"",
         "title":"Employee Tracker",
         "img":"EmployeeTracker.png",
-        "desc":"",
-        "repo":""
+        "desc":"Command Line based employee management system",
+        "repo":"https://github.com/michaelhrivnak/Employee-Tracker",
+        "tech":[            
+            {
+                "name":"nodejs",
+                "icon":"nodejs.png"
+            },
+            {
+                "name":"mysql",
+                "icon":"mysql.png"
+            }
+        ]
     }
 ]

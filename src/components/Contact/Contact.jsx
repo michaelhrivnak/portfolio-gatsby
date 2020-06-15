@@ -30,6 +30,60 @@ const Contact = (props) => {
                 </div>    
             </div>
         </div>
+        <style jsx>{`
+        #externalLinks{
+            padding-left: 5em;
+        }
+        #externalLinks h4{
+            font-size:1.5rem;
+            letter-spacing: 0.1em;
+            font-weight:inherit;
+        }
+        .flex{
+            display:flex;
+        }
+        .inline-flex{
+            display: inline-flex;
+        }
+        /*contact*/
+        .input{    
+            margin-bottom: 10px;
+        }
+        .input-title{
+            margin-bottom:5px;
+        }
+        input{
+            color: #777777;
+            width:100%;
+            padding: 5px 0 5px 5px;
+        }
+        #messageBox{
+            height: 100px;
+            width: 100%;
+            padding: 5px 0 5px 5px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #777777;
+        }
+        form{
+            padding-right:5px;
+            width:50%;
+        }
+        input[type=submit]{
+            background-color: #467C8A;
+            color: #ffffff;
+            font-size: 15px;
+            width: unset;
+            padding: 10px 20px;
+            border: 1px solid #666666;
+            border-radius: 2px;    
+            cursor:pointer;
+        }
+        input[type=submit]:hover{
+            background-color: rgb(53, 99, 109);
+            border: 1px solid #777777;
+        }
+
+        `}</style>
     </section> )
 }
 

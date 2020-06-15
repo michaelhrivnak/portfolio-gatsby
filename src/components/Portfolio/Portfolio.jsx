@@ -2,7 +2,6 @@ import React from 'react';
 import ProjectCard from '../ProjectCard/ProjectCard';
 import { useStaticQuery, graphql } from "gatsby";
 
-
 const Portfolio = () => {
     
     const {allProjectsJson: {edges: projects}} = useStaticQuery(graphql`
@@ -16,6 +15,10 @@ const Portfolio = () => {
                         img
                         repo
                         desc
+                        tech{
+                            name
+                            icon
+                        }
                     }
                 }               
             }
@@ -30,7 +33,7 @@ const Portfolio = () => {
         <hr/>
         <ul id="portfolio-items" className="px-2">
             {projects.map( ({node:project}) => 
-                <ProjectCard  key={project.id} url={project.url} title={project.title} imgSrc={project.img}/>
+                <ProjectCard  key={project.id} url={project.url} title={project.title} tech={project.tech} desc={project.desc} repo={project.repo} imgSrc={project.img}/>
             )}
         </ul>   
         <style jsx>{`
@@ -38,7 +41,8 @@ const Portfolio = () => {
                 display:flex;
                 flex-wrap: wrap;
                 justify-content: space-between;
-            }
+                list-style-type: none;
+            }            
         `}</style>
     </section>)
 

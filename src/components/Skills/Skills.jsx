@@ -1,25 +1,31 @@
 import React from 'react';
-import HTMLimg from '../../images/html.png';
-import CSSimg from '../../images/css.png';
-import JSimg from '../../images/javascript.png';
-import JQUERYimg from '../../images/Jquery.png';
-import NODEimg from '../../images/nodejs.png';
-import CSharpImg from '../../images/800px-C_Sharp_logo.png';
-
+import {useStaticQuery, graphql} from "gatsby";
 
 const Skills = () => {
     
+    const {allSkillsJson: {edges: skills}} = useStaticQuery(graphql`
+        query{
+            allSkillsJson{
+                edges{
+                    node{
+                        id
+                        img
+                        alt
+                        skill
+                    }
+                }               
+            }
+        }
+    `);
+
     return (
     <section id="skills" className="text-2xl tracking-widest">
         <h1>TECHNOLOGIES</h1>
         <hr />
         <div id="techLogos">
-            <img alt="HTML 5" src={HTMLimg}/>
-            <img alt="CSS 3" src={CSSimg}/>
-            <img alt="Javascript" src={JSimg}/>
-            <img alt="Jquery" src={JQUERYimg} />
-            <img alt="nodesJS" src={NODEimg} />
-            <img alt="C#" src={CSharpImg}/>
+            {skills.map(({node:skill})=>
+                <img alt={skill.img} src={`/${skill.img}`}/>
+            )}
         </div>
         <style jsx>{`
             #techLogos{
