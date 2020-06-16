@@ -1,4 +1,6 @@
 import React from 'react';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faGithub,faLinkedin} from '@fortawesome/free-brands-svg-icons';
 
 const Contact = (props) => {
    
@@ -6,8 +8,8 @@ const Contact = (props) => {
     <section id="contact" className="text-2xl tracking-widest">
         <h1>CONTACT</h1>
         <hr/>
-        <div className="w-full flex pt-3">
-            <form className="text-lg inline-block tracking-normal" action="https://formspree.io/mwkpvwjv" method="POST">
+        <div className="flex">
+            <form action="https://formspree.io/mwkpvwjv" method="POST">
                 <div className="input">
                     <label id="lblContactName" htmlFor="contactName" className="input-title">NAME</label>
                     <input id="contactName" aria-labelledby="lblContactName" type="text" name="name" defaultValue="John Doe" onFocus={function(e){e.target.value=''}}/>
@@ -25,14 +27,14 @@ const Contact = (props) => {
             <div id="externalLinks" className="w-2 pl-5">
                 <h4 className="block">LINKS</h4>                        
                 <div className="inline-flex">
-                    <a href="https://github.com/michaelhrivnak" aria-label="github"><i className="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/michael-hrivnak-9a81aa38" aria-label="linkedIn"><i className="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/michaelhrivnak" aria-label="github"><FontAwesomeIcon size="4x" icon={faGithub}/></a>
+                    <a href="https://www.linkedin.com/in/michael-hrivnak-9a81aa38" aria-label="linkedIn"><FontAwesomeIcon size="4x" icon={faLinkedin}/></a>
                 </div>    
             </div>
         </div>
         <style jsx>{`
         #externalLinks{
-            padding-left: 5em;
+            padding-left: 1rem;
         }
         #externalLinks h4{
             font-size:1.5rem;
@@ -41,9 +43,13 @@ const Contact = (props) => {
         }
         .flex{
             display:flex;
+            /*flex-wrap:wrap;*/
         }
         .inline-flex{
             display: inline-flex;
+        }
+        a{
+            margin-right:1rem;
         }
         /*contact*/
         .input{    
@@ -65,8 +71,8 @@ const Contact = (props) => {
             color: #777777;
         }
         form{
-            padding-right:5px;
-            width:50%;
+            padding-right:5px;    
+            min-width:50%;        
         }
         input[type=submit]{
             background-color: #467C8A;
