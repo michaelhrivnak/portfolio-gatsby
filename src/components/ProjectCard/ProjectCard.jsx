@@ -1,5 +1,6 @@
 import React from 'react';
-
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faExternalLinkAlt} from '@fortawesome/free-solid-svg-icons'
 
 const ProjectCard = (props) => {
     
@@ -17,10 +18,10 @@ const ProjectCard = (props) => {
             <h3 className="portfolio-name">{props.title}</h3>
             <div>
                 {props.url && <a href={props.url}>            
-                    View Deployment
+                    View Deployment <FontAwesomeIcon size="1x" icon={faExternalLinkAlt}/>
                 </a>}            
                 {props.repo && <a href={props.repo}>            
-                    View Repo
+                    View Repo <FontAwesomeIcon size="1x" icon={faExternalLinkAlt}/>
                 </a>}
             </div>
         </div>
