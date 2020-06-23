@@ -19,12 +19,12 @@ const Skills = () => {
     `);
 
     return (
-    <section id="skills" className="text-2xl tracking-widest">
+    <section id="skills">
         <h1>TECHNOLOGIES</h1>
         <hr />
         <div id="techLogos">
             {skills.map(({node:skill})=>
-                <img alt={skill.img} src={`/${skill.img}`}/>
+                <img key={skill.id} alt={skill.skill} src={`/${skill.img}`}/>
             )}
         </div>
         <style jsx>{`
@@ -32,13 +32,13 @@ const Skills = () => {
                 display:flex;
                 padding:20px;
                 flex-wrap: wrap;
+                align-items: flex-start; /* new */
                 justify-content: space-between;
             }
             #techLogos > img{
                 width: 100px;
                 height: auto;
-                margin: auto;
-                
+                margin: auto;                
             }
         `}</style>
     </section>

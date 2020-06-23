@@ -1,6 +1,6 @@
 import React from 'react';
 import { useStaticQuery, graphql } from "gatsby"
-import './Bio.css';
+
 
 const Bio = () => {
     

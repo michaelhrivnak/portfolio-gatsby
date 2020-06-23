@@ -4,7 +4,7 @@
         "title":"buckEATlist",
         "img":"buckeatlist.png",
         "desc":"Make a bucket list of where you want to eat and share it with friends",
-        "repo":"",
+        "repo":"https://github.com/davidgeht/BuckEATlist",
         "tech":[
             {
                 "name":"react",
@@ -46,7 +46,7 @@
         "title":"Password Generator",
         "img":"PasswordGenerator.png",
         "desc":"Simple password generator with complexity options",
-        "repo":"",
+        "repo":"https://github.com/michaelhrivnak/Password-Generator",
         "tech":[
             {
                 "name":"HTML 5",
@@ -63,7 +63,7 @@
         "title":"Weather Dashboard",
         "img":"WeatherDashboard.png",
         "desc":"Location search based weather dashboard with 5 day forecast using openweather API",
-        "repo":"",
+        "repo":"https://github.com/michaelhrivnak/Weather-Dashboard",
         "tech":[
             {
                 "name":"bootstrap",
