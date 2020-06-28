@@ -11,7 +11,8 @@ const Contact = (props) => {
         <div className="flex">
             <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
                 <p className="hidden">
-                    <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+                    <label htmlFor="bot-field">Don’t fill this out if you're human:</label>
+                    <input id="bot-field" type="text" name="bot-field" />
                 </p>
                 <div className="input">
                     <label id="lblContactName" htmlFor="contactName" className="input-title">NAME</label>
@@ -25,7 +26,7 @@ const Contact = (props) => {
                     <label id="lblMessageBox" htmlFor="messageBox" className="input-title">MESSAGE</label>
                     <textarea id="messageBox" name="message" aria-labelledby="lblMessageBox"></textarea>
                 </div>
-                <input id="submit" type="submit" className="btn submit" aria-label="submit" defaultValue="SUBMIT"/>
+                <button id="submit" type="submit" className="btn submit" aria-label="submit">SUBMIT</button>
             </form>
             <div id="externalLinks" className="w-2 pl-5">
                 <h4 className="block">LINKS</h4>                        
@@ -76,8 +77,11 @@ const Contact = (props) => {
         form{
             padding-right:5px;    
             min-width:50%;        
+        }       
+        form > .hidden{
+            display: none;
         }
-        input[type=submit]{
+        .btn.submit{
             background-color: #467C8A;
             color: #ffffff;
             font-size: 15px;
@@ -87,14 +91,11 @@ const Contact = (props) => {
             border-radius: 2px;    
             cursor:pointer;
         }
-        input[type=submit]:hover{
+        .btn.submit:hover{
             background-color: rgb(53, 99, 109);
             border: 1px solid #777777;
+            cursor: pointer;
         }
-        form > .hidden{
-            display: none;
-        }
-
         `}</style>
     </section> )
 }

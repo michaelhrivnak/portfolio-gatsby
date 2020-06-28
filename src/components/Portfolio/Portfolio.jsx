@@ -24,8 +24,7 @@ const Portfolio = () => {
             }
         }
     `);
-
-    console.log(projects);
+    
 
     return (
     <section id="portfolio" className="text-2xl tracking-widest">

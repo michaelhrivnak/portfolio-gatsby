@@ -1,14 +1,15 @@
-import React from 'react';
+import React,{useState} from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faExternalLinkAlt} from '@fortawesome/free-solid-svg-icons'
 
 const ProjectCard = (props) => {
     
-
+    const [hover, setHover] = useState(false);
+    
     return (
-    <li className="portfolio-item-wrapper">
+    <li className="portfolio-item-wrapper" onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
         <img alt=""  className="portfolio-image" src={`/${props.imgSrc}`}/>
-        <p>{props.desc}</p>
+        <p className="desc">{props.desc}</p>
         <div className="techIcons">
             {props.tech.map(t => 
                 <img key={t.name} alt={t.name} src={`/${t.icon}`}/>
@@ -59,11 +60,14 @@ const ProjectCard = (props) => {
                 box-shadow: -2px -2px 2px 2px rgb(162,162,162,0.3);  
                 
             }
+            .desc{
+                font-weight: ${hover? "bold":"unset"};
+            }
             .portfolio-image{
                 width:inherit;                 
-                opacity: 0.7;      
+                opacity: ${hover? 1 : 0.7};      
                 margin-bottom:0;
-            }
+            }            
             .links{
                 padding: 15px 0;    
                 background-color: #467C8A;
