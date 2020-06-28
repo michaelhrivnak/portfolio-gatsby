@@ -23,6 +23,12 @@ module.exports = {
     `gatsby-transformer-remark`,
     `gatsby-transformer-json`,
     `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-plugin-favicon`,
+      options:{
+        logo : "./src/images/MichaelHrivnak.png"
+      }
+    },
     `gatsby-plugin-sharp`,
     `gatsby-plugin-styled-jsx`,
     {
