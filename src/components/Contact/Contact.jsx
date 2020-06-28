@@ -9,7 +9,7 @@ const Contact = (props) => {
         <h1>CONTACT</h1>
         <hr/>
         <div className="flex">
-            <form name="contact" netlify>
+            <form name="contact" method="POST" data-netlify="true">
                 <div className="input">
                     <label id="lblContactName" htmlFor="contactName" className="input-title">NAME</label>
                     <input id="contactName" aria-labelledby="lblContactName" type="text" name="name" defaultValue="John Doe" onFocus={function(e){e.target.value=''}}/>
