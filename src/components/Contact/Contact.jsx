@@ -9,14 +9,17 @@ const Contact = (props) => {
         <h1>CONTACT</h1>
         <hr/>
         <div className="flex">
-            <form name="contact" method="POST" data-netlify="true">
+            <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+                <p className="hidden">
+                    <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+                </p>
                 <div className="input">
                     <label id="lblContactName" htmlFor="contactName" className="input-title">NAME</label>
-                    <input id="contactName" aria-labelledby="lblContactName" type="text" name="name" defaultValue="John Doe" onFocus={function(e){e.target.value=''}}/>
+                    <input id="contactName" aria-labelledby="lblContactName" type="text" name="name" placeholder="John Doe"/>
                 </div>
                 <div className="input">
                     <label id="lblEmailAddress" htmlFor="emailAddress" className="input-title">EMAIL</label>
-                    <input id="emailAddress" aria-labelledby="lblEmailAddress" type="email" name="_replyto" defaultValue="example@domain.com" onFocus={function(e){e.target.value=''}}/>
+                    <input id="emailAddress" aria-labelledby="lblEmailAddress" type="email" name="_replyto" placeholder="example@domain.com" />
                 </div>
                 <div className="input">
                     <label id="lblMessageBox" htmlFor="messageBox" className="input-title">MESSAGE</label>
@@ -87,6 +90,9 @@ const Contact = (props) => {
         input[type=submit]:hover{
             background-color: rgb(53, 99, 109);
             border: 1px solid #777777;
+        }
+        form > .hidden{
+            display: none;
         }
 
         `}</style>
