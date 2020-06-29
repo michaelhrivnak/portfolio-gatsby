@@ -1,17 +1,19 @@
 import React, {useState, useEffect} from 'react';
-import throttle from 'lodash.throttle';
 
 const MAX_WIDTH = 1457;
 
 const Menu = () => {
         
-    const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= MAX_WIDTH);
+    const [isSmallScreen, setIsSmallScreen] = useState();
 
-    const handleWindowResize = () => {        
-        setIsSmallScreen(window.innerWidth <= MAX_WIDTH);       
+    const handleWindowResize = () => { 
+        if(typeof window !== undefined){
+            setIsSmallScreen(window.innerWidth <= MAX_WIDTH);       
+        }       
     }
 
-    useEffect( () =>{        
+    useEffect( () =>{     
+        handleWindowResize();   
         window.addEventListener('resize', handleWindowResize);
     } ,[handleWindowResize]);
 
