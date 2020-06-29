@@ -47,7 +47,7 @@ const Menu = () => {
                 transform: scaleX(0);  
                 transition: transform 0.25s ease-in-out;
             }
-            a:hover:after {
+            a:hover:after, a:focus:after {
                 transform: scaleX(1); 
             }        
             a:after{ 

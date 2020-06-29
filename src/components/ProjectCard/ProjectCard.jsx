@@ -5,9 +5,10 @@ import {faExternalLinkAlt} from '@fortawesome/free-solid-svg-icons'
 const ProjectCard = (props) => {
     
     const [hover, setHover] = useState(false);
-    
+    const [focus, setFocus] = useState(false);
+
     return (
-    <li className="portfolio-item-wrapper" onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
+    <li tabIndex="0" className="portfolio-item-wrapper" onFocus={()=> setFocus(true)} onBlur={() => setFocus(false)} onMouseEnter={() => setHover(true)} onMouseLeave={() => setHover(false)}>
         <img alt=""  className="portfolio-image" src={`/${props.imgSrc}`}/>
         <p className="desc">{props.desc}</p>
         <div className="techIcons">
@@ -18,10 +19,10 @@ const ProjectCard = (props) => {
         <div className="links">
             <h3 className="portfolio-name">{props.title}</h3>
             <div>
-                {props.url && <a href={props.url}>            
+                {props.url && <a onFocus={()=> setFocus(true)} onBlur={() => setFocus(false)} href={props.url}>            
                     View Deployment <FontAwesomeIcon size="1x" icon={faExternalLinkAlt}/>
                 </a>}            
-                {props.repo && <a href={props.repo}>            
+                {props.repo && <a onFocus={()=> setFocus(true)} onBlur={() => setFocus(false)} href={props.repo}>            
                     View Repo <FontAwesomeIcon size="1x" icon={faExternalLinkAlt}/>
                 </a>}
             </div>
@@ -59,15 +60,15 @@ const ProjectCard = (props) => {
                 border: 2px solid #666666;
                 border-radius: 4px;   
                 transition: all .25s;
-                box-shadow: ${hover? "0px 0px 5px 5px #467C8A55" :"2px 2px 2px 2px rgb(162,162,162,0.3)"};  
-                
+                box-shadow: ${hover || focus? "0px 0px 5px 5px #467C8A55" :"2px 2px 2px 2px rgb(162,162,162,0.3)"};  
+               
             }
             .desc{
-                font-weight: ${hover? "bold":"unset"};
+                font-weight: ${hover || focus? "bold":"unset"};
             }
             .portfolio-image{
                 width:inherit;                 
-                opacity: ${hover? 1 : 0.5};      
+                opacity: ${hover || focus? 1 : 0.5};      
                 margin-bottom:0;
                 transition: opacity .25s;
             }            
