@@ -32,8 +32,8 @@ const Contact = (props) => {
             <div id="externalLinks">
                 <h4 className="block">LINKS</h4>                        
                 <div className="inline-flex">
-                    <a className="link" href="https://github.com/michaelhrivnak" aria-label="github"><FontAwesomeIcon size="4x" icon={faGithub}/></a>
-                    <a className="link" href="https://www.linkedin.com/in/michael-hrivnak-9a81aa38" aria-label="linkedIn"><FontAwesomeIcon size="4x" icon={faLinkedin}/></a>
+                    <a className="link" target="_blank" rel="nofollow noreferrer noopener" href="https://github.com/michaelhrivnak" aria-label="github"><FontAwesomeIcon size="4x" icon={faGithub}/></a>
+                    <a className="link" target="_blank" rel="nofollow noreferrer noopener" href="https://www.linkedin.com/in/michael-hrivnak-9a81aa38" aria-label="linkedIn"><FontAwesomeIcon size="4x" icon={faLinkedin}/></a>
                 </div>    
             </div>
         </div>
