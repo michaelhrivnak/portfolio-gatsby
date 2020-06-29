@@ -9,6 +9,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import 'normalize.css';
 import "./layout.css";
+import "./colours.css";
 
 const Layout = ({ children }) => {  
 

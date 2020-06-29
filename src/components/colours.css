@@ -1,0 +1,7 @@
+:root{
+    --colour-main-hex: #467C8A;
+    --colour-main-rgb: rgb(70,124,138);
+    --colour-main-rgba: rgba(70,124,138, 0.35);
+    --colour-bg: rgb(226, 226, 226);
+    --colour-text: #333;
+}

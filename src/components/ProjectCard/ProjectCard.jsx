@@ -56,8 +56,10 @@ const ProjectCard = (props) => {
                 min-width: 200px;
                 max-width: 350px;                     
                 height: auto; 
-                border: 2px solid #666666;       
-                box-shadow: -2px -2px 2px 2px rgb(162,162,162,0.3);  
+                border: 2px solid #666666;
+                border-radius: 4px;   
+                transition: all .25s;
+                box-shadow: ${hover? "0px 0px 5px 5px #467C8A55" :"2px 2px 2px 2px rgb(162,162,162,0.3)"};  
                 
             }
             .desc{
@@ -65,12 +67,13 @@ const ProjectCard = (props) => {
             }
             .portfolio-image{
                 width:inherit;                 
-                opacity: ${hover? 1 : 0.7};      
+                opacity: ${hover? 1 : 0.5};      
                 margin-bottom:0;
+                transition: opacity .25s;
             }            
             .links{
                 padding: 15px 0;    
-                background-color: #467C8A;
+                background-color: var(--colour-main-hex);
                 color: #ffffff; 
             }
             .links > div{

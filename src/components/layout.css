@@ -620,8 +620,8 @@ body{
   font-family: 'Raleway', Arial, Helvetica, sans-serif;
   font-size: 16px;
   margin: 0;
-  background-color: rgb(226, 226, 226);
-  color: #777777;
+  background-color: var(--colour-bg);
+  color: var(--colour-text);
   
 }
 
@@ -630,7 +630,7 @@ a > i{
   margin-right: 25px;
 }
 a:hover > i{
-  color:#467C8A;
+  color:var(--colour-main-hex);
 }
 a{
   color: inherit;
@@ -644,6 +644,9 @@ h1{
   font-size: 1.5rem;
   font-weight: inherit;
 }
+
+section
+
 @media only screen and (max-width: 480px) {
   html {
     font-size: 100%;

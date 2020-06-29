@@ -28,11 +28,11 @@ const Contact = (props) => {
                 </div>
                 <button id="submit" type="submit" className="btn submit" aria-label="submit">SUBMIT</button>
             </form>
-            <div id="externalLinks" className="w-2 pl-5">
+            <div id="externalLinks">
                 <h4 className="block">LINKS</h4>                        
                 <div className="inline-flex">
-                    <a href="https://github.com/michaelhrivnak" aria-label="github"><FontAwesomeIcon size="4x" icon={faGithub}/></a>
-                    <a href="https://www.linkedin.com/in/michael-hrivnak-9a81aa38" aria-label="linkedIn"><FontAwesomeIcon size="4x" icon={faLinkedin}/></a>
+                    <a className="link" href="https://github.com/michaelhrivnak" aria-label="github"><FontAwesomeIcon size="4x" icon={faGithub}/></a>
+                    <a className="link" href="https://www.linkedin.com/in/michael-hrivnak-9a81aa38" aria-label="linkedIn"><FontAwesomeIcon size="4x" icon={faLinkedin}/></a>
                 </div>    
             </div>
         </div>
@@ -82,7 +82,7 @@ const Contact = (props) => {
             display: none;
         }
         .btn.submit{
-            background-color: #467C8A;
+            background-color: var(--colour-main-hex);
             color: #ffffff;
             font-size: 15px;
             width: unset;
@@ -95,6 +95,9 @@ const Contact = (props) => {
             background-color: rgb(53, 99, 109);
             border: 1px solid #777777;
             cursor: pointer;
+        }
+        .link:hover{
+            color: var(--colour-main-hex);
         }
         `}</style>
     </section> )
