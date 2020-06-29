@@ -26,7 +26,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-favicon`,
       options:{
-        logo : "./src/images/MichaelHrivnak.png"
+        logo : "./src/images/favicon.png"
       }
     },
     `gatsby-plugin-sharp`,
