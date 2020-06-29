@@ -9,7 +9,8 @@ const Contact = (props) => {
         <h1>CONTACT</h1>
         <hr/>
         <div className="flex">
-            <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+            <form name="contact" method="POST" action="/success" netlify-honeypot="bot-field" data-netlify="true">
+                <input type="hidden" name="form-name" value="contact" />
                 <p className="hidden">
                     <label htmlFor="bot-field">Don’t fill this out if you're human:</label>
                     <input id="bot-field" type="text" name="bot-field" />
