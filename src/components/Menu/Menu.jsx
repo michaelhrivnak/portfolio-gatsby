@@ -23,7 +23,7 @@ const Menu = () => {
         <li><a href="#bio">ABOUT</a></li>
         <li><a href="#skills">SKILLS</a></li>
         <li><a href="#portfolio">PORTFOLIO</a></li>
-        <li><a href="#resume">RESUME</a></li>
+        {/* <li><a href="#resume">RESUME</a></li> */}
         <li><a href="#contact">CONTACT</a></li>
         <style jsx>{`
             .top{
